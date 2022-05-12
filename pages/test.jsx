@@ -1,5 +1,4 @@
-import Head from 'next/head'
-
+import Head from 'next/head';
 
 export default function Test() {
   return (
@@ -10,20 +9,23 @@ export default function Test() {
         <link rel="icon" href="/favicon.ico"></link>
       </Head>
       Hello
-      <i class="fa-solid fa-phone"></i>
-
+      <i className="fa-solid fa-phone"></i>
       <button className="button">test</button>
       <button className="button button-large">test large</button>
-
-      <a href="" className="button">test</a>
-      <a href="" className="button button-large">test large</a>
-
+      <a href="" className="button">
+        test
+      </a>
+      <a href="" className="button button-large">
+        test large
+      </a>
       <div className="mt-4">
         <span className="badge">-50%</span>
         <span className="badge badge-font-large">%</span>
         <span className="badge badge-secondary">new entry</span>
-        <span className="badge badge-secondary badge badge-font-large">-5%</span>
+        <span className="badge badge-secondary badge badge-font-large">
+          -5%
+        </span>
       </div>
-</div>
-  )
+    </div>
+  );
 }
