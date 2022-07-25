@@ -1,31 +1,31 @@
-export default function ProductTile() {
+// props
+// props.product
+
+export default function ProductTile({ product = {} }) {
+  const { productPrice = '', productName = '', productImage = '' } = product;
+
   return (
     <article className="product-tile">
       <header className="product-tile-header">
         <div className="product-tile-image">
-          <a href="" title="Thread AffThread Affair Gingham Suit ">
-            <img
-              src="/images/products/product-01a.jpg"
-              alt="Thread Affair Gingham Suit "
-            ></img>
+          <a href="" title={productName}>
+            <img src={productImage} alt={productName}></img>
           </a>
         </div>
 
         <div className="product-tile-badge">
-          <span className="badge badge font-large badge-secondary">%</span>
+          <span className="badge badge-font-large badge-secondary">%</span>
         </div>
 
         <div className="product-tile-headings">
           <h1>
-            <a href="" title="Thread Affair Gingham Suit ">
-              <span>Thread Affair</span>
-              <span> Gingham </span>
-              Suit
+            <a href="" title={productName}>
+              {productName}
             </a>
           </h1>
 
           <h2>
-            <a href="" title="Thread Affair Gingham Suit">
+            <a href="" title={productName}>
               Berlin fit-Regular
             </a>
           </h2>
@@ -36,7 +36,7 @@ export default function ProductTile() {
         <div className="product-tile-pricing">
           <span className="product-price-regular">399</span>
           <span className="product-price">
-            USD <span>299</span>
+            USD <span>{productPrice}</span>
           </span>
         </div>
       </section>
@@ -44,10 +44,10 @@ export default function ProductTile() {
       <footer className="product-tile-controls">
         <button
           className="button product-tile-a2c"
-          title="Add to cart"
+          title="Add to Cart"
           type="button"
         >
-          Add to cart
+          Add to Cart
         </button>
       </footer>
     </article>
